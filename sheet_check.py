@@ -37,8 +37,13 @@ from datetime import datetime
 # =========================
 # TELEGRAM CONFIG
 # =========================
-BOT_TOKEN = "8047553455:AAG5qomeypPS9ekccB-FNXNA5OrTi5iCTnk"
-CHAT_ID = "-1003818874575"
+import os
+
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+CHAT_ID = os.getenv("CHAT_ID")
+
+
+
 
 # =========================
 # GOOGLE SHEET CSV URL
