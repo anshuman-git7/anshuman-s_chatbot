@@ -33,6 +33,7 @@
 import pandas as pd
 import requests
 from datetime import datetime
+import pytz
 
 # =========================
 # TELEGRAM CONFIG
@@ -60,7 +61,9 @@ def get_todays_word():
     # convert date column
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
 
-    today = datetime.today().date()
+   ist = pytz.timezone("Asia/Kolkata")
+   today = datetime.now(ist).date()
+
 
     today_row = df[df["date"].dt.date == today]
 
