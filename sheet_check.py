@@ -61,8 +61,8 @@ def get_todays_word():
     # convert date column
     df["date"] = pd.to_datetime(df["date"], errors="coerce")
 
-   ist = pytz.timezone("Asia/Kolkata")
-   today = datetime.now(ist).date()
+    ist = pytz.timezone("Asia/Kolkata")
+    today = datetime.now(ist).date()
 
 
     today_row = df[df["date"].dt.date == today]
